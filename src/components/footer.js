@@ -63,7 +63,7 @@ const FooterPage = () => {
 							target="_blank"
 						>
 							<StaticImage
-								src={`../images/${image.src}`}
+								src={image.src}
 								alt="test"
 								placeholder="blurred"
 								fit="contain"

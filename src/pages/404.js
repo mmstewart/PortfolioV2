@@ -1,49 +1,57 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import { navigate } from "gatsby";
 
 const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+	return (
+		<section>
+			<div class="container flex items-center min-h-screen px-6 py-12 mx-auto">
+				<div class="flex flex-col items-center max-w-sm mx-auto text-center">
+					<p class="p-3 text-sm font-medium rounded-full btn no-animation cursor-default hover:bg-base-200">
+						<StaticImage
+							src="../images/information.png"
+							alt="test"
+							placeholder="blurred"
+							fit="contain"
+							height={20}
+							width={20}
+						/>
+					</p>
+					<h1 class="mt-3 text-2xl font-semibold md:text-3xl">
+						Page not found
+					</h1>
+					<p class="mt-4">
+						The page you are looking for doesn't exist. Here are
+						some helpful links:
+					</p>
+					<div class="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
+						<button
+							onClick={() => navigate(-1)}
+							class="btn btn-ghost transition ease-in-out duration-500"
+						>
+							<StaticImage
+								src="../images/arrow-left.png"
+								alt="test"
+								placeholder="blurred"
+								fit="contain"
+								height={20}
+								width={20}
+							/>
+							<span>Go back</span>
+						</button>
+						<a
+							href="/"
+							class="btn transition ease-in-out duration-500"
+						>
+							Take me home
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Not found</title>;
