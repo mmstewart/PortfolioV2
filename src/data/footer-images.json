@@ -1,0 +1,24 @@
+{
+    "images": [
+        {
+            "title": "E-mail",
+            "href": "mailto:mss.stewart1@gmail.com",
+            "src": "../images/mail.png"
+        },
+        {
+            "title": "Resume",
+            "href": "/static/resume-ad20119a48928f152b5e24a7bb7bb353.pdf",
+            "src": "../images/document.png"
+        },
+        {
+            "title": "Linkedin",
+            "href": "https://linkedin.com/in/marcusmstewart",
+            "src": "../images/linkedin.png"
+        },
+        {
+            "title": "Github",
+            "href": "https://github.com/mmstewart/",
+            "src": "../images/github.png"
+        }
+    ]
+}

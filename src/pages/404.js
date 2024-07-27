@@ -24,13 +24,14 @@ const NotFoundPage = () => {
 						The page you are looking for doesn't exist. Here are
 						some helpful links:
 					</p>
-					<div class="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
+					<div class="flex items-center justify-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
 						<button
 							onClick={() => navigate(-1)}
 							class="btn btn-ghost transition ease-in-out duration-500"
 						>
 							<StaticImage
 								src="../images/arrow-left.png"
+								className="w-5 h-5"
 								alt="test"
 								placeholder="blurred"
 								fit="contain"
